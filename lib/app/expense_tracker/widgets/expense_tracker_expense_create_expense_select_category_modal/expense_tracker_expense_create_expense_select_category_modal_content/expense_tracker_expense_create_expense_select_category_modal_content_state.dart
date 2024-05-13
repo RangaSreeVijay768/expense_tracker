@@ -1,0 +1,7 @@
+part of 'expense_tracker_expense_create_expense_select_category_modal_content_cubit.dart';
+
+@freezed
+class ExpenseTrackerExpenseCreateExpenseSelectCategoryModalContentState
+    with _$ExpenseTrackerExpenseCreateExpenseSelectCategoryModalContentState {
+  const factory ExpenseTrackerExpenseCreateExpenseSelectCategoryModalContentState.initial() = _Initial;
+}
