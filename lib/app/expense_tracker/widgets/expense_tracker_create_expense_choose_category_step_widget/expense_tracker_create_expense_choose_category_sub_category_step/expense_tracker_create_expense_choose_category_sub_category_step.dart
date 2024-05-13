@@ -62,10 +62,11 @@ class ExpenseTrackerCreateExpenseChooseCategorySubCategoryStep
                   ),),
                 ),
                 SizedBox(height: 10,),
-                Container(
-                  margin: edge_insets_t_16,
-                  height: MediaQuery.sizeOf(context).height/4,
-                  child: Expanded(child: GridView.builder(
+                Expanded(
+                  child: Container(
+                      margin: edge_insets_t_16,
+                      height: MediaQuery.sizeOf(context).height/4,
+                      child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         crossAxisSpacing: 16,

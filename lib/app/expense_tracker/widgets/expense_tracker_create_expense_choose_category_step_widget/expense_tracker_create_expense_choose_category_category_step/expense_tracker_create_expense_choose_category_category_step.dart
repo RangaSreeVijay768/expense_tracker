@@ -86,15 +86,18 @@ class ExpenseTrackerCreateExpenseChooseCategoryCategoryStep
                   ),),
                 ),
                 SizedBox(height: 10,),
-                Container(
-                  margin: edge_insets_t_16,
-                  height: MediaQuery.sizeOf(context).height/4,
-                  child: Expanded(child: GridView.count(
-                      crossAxisSpacing: 16,
-                      mainAxisSpacing: 16,
-                      crossAxisCount: 4, // Number of columns
-                      children: List.generate(6, (index) {
-                        // Generate 6 containers
+                Expanded(
+                  child: Container(
+                      margin: edge_insets_t_16,
+                      height: MediaQuery.sizeOf(context).height/4,
+                      child: GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 4,
+                          crossAxisSpacing: 16,
+                          mainAxisSpacing: 16
+                      ),
+                      itemCount: 5,
+                      itemBuilder: (context, index){
                         return Container(
                           padding: edge_insets_5,
                           decoration: BoxDecoration(
@@ -131,7 +134,7 @@ class ExpenseTrackerCreateExpenseChooseCategoryCategoryStep
                             ),
                           ),
                         );
-                      })
+                      }
                   )),
                 ),
                 SizedBox(height: 20,),
